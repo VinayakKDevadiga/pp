@@ -12,8 +12,7 @@
             max-width: 100%;
 
 
-            background: rgb(34,193,195);
-background: linear-gradient(0deg, rgb(11, 12, 12) 0%, rgba(149,181,209,1) 100%);
+           
 
             border: 2px solid red;
 
@@ -87,7 +86,7 @@ background: linear-gradient(0deg, rgb(11, 12, 12) 0%, rgba(149,181,209,1) 100%);
             position: absolute;
             margin-left: 50%;
             margin-top: 18%;
-            border: 5px solid blue;
+           /* border: 5px solid blue;*/
         }
 
         .nameptag {
@@ -100,8 +99,8 @@ background: linear-gradient(0deg, rgb(11, 12, 12) 0%, rgba(149,181,209,1) 100%);
             width: 99%;
             margin-left: 0.5%;
 
-            background: rgb(34,193,195);
-            background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(98,90,93,1) 100%);
+            background: rgb(34, 193, 195);
+            background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(98, 90, 93, 1) 100%);
             box-shadow: 0% 0% 0px rgba(244, 186, 186, 0.5);
             border-radius: 20px;
 
@@ -137,18 +136,62 @@ background: linear-gradient(0deg, rgb(11, 12, 12) 0%, rgba(149,181,209,1) 100%);
 
         .edetails {
             color: brown;
+        
         }
-        .footer{
+
+        .footer {
             display: inline-block;
             float: bottom;
             margin-top: 5%;
             height: 100%;
             width: 100%;
-            background: rgb(34,193,195);
-            background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(98,90,93,1) 100%);
+            background: rgb(34, 193, 195);
+            background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(98, 90, 93, 1) 100%);
         }
-        .foterdetails{
+
+        .foterdetails {}
+
+        @media screen and (max-width: 768px){
+            .percentage {
+                display: inline-block;
+                max-width: 40%;
+                float: right;
+    
+            }
+            h1 ,h2 ,h2 ,h4 ,h5, h6{
+                  font-size: 20%;
+            }
            
+            #educationheading,.edud{
+                padding-left: 1%;
+        
+            }
+            p {
+                font-size: 20%;
+            }
+            .sections {
+                padding-bottom: 10%;
+              
+            }
+            .extra{
+                padding-left: 7.5%;
+            }
+            #textcontainer{
+                
+                font-size: 100%;
+                margin-top: 0;
+            }
+            button {
+                padding-left: 0px;
+                margin-left: 0;
+                margin-top: 0.02%;
+                size: 2px;
+            }
+            .photo{
+                width: 30%;
+
+            }
+            
         }
     </style>
 
@@ -157,7 +200,7 @@ background: linear-gradient(0deg, rgb(11, 12, 12) 0%, rgba(149,181,209,1) 100%);
 <body onload="displayText()">
     <div class="con">
         <div class="container">
-            <button class="menu-button" onclick="toggleNav()">Menu</button>
+            <i class="fa-solid fa-bars fa-fade menu-button" onclick="toggleNav()" style="color: #1f2123;"></i>
             <div class="sidebar">
                 <div class="btn">
                     <button class="close-button" onclick="toggleNav()">Close</button>
@@ -191,17 +234,17 @@ background: linear-gradient(0deg, rgb(11, 12, 12) 0%, rgba(149,181,209,1) 100%);
 
 
         </div>
-        <h2>Education:</h2>
-        </p><br>
+        <h2 id="educationheading">Education:</h2>
+        </p>
         <p class="edetails">SSLC : <a href="https://maps.app.goo.gl/ocv5Ugkstn2FpdPdA">Govt High School Bailur,Uttara
                 Kannada</a>
         <p class="percentage">Percentage:89.28</p>
         </p><br>
-        <p class="edetails">PUC : <a href="https://maps.app.goo.gl/7hw6vy4fg61ytZV79">R.N.Shetty P U College
+        <p class="edetails edud" >PUC : <a href="https://maps.app.goo.gl/7hw6vy4fg61ytZV79">R.N.Shetty P U College
                 Murdeshwar,Uttara Kannada</a>
-        <p class="percentage">Percentage:775.5</p>
+        <p class="percentage edud">Percentage:775.5</p>
         </p><br>
-        <p class="edetails">B.E. : <a
+        <p class="edetails edud">B.E. : <a
                 href="https://www.bing.com/ck/a?!&&p=e6f755c813680614JmltdHM9MTY4Njk2MDAwMCZpZ3VpZD0wZDJmZDJjZi1kNjdiLTYzMmYtMjllZS1jMGU5ZDc3ZDYyY2EmaW5zaWQ9NTIxNg&ptn=3&hsh=3&fclid=0d2fd2cf-d67b-632f-29ee-c0e9d77d62ca&psq=sdmit+ujire&u=a1aHR0cHM6Ly9zZG1pdC5pbi8&ntb=1">SDMIT
                 Ujire</a>
         <p class="percentage">CGPA(ttill 5th sem):775.5</p>
@@ -211,13 +254,15 @@ background: linear-gradient(0deg, rgb(11, 12, 12) 0%, rgba(149,181,209,1) 100%);
 
     </div>
     <div class="footer">
-    <div class="foterdetails">
-        <p class="fdetails"><small>@Copyright climed by Vinayak K Devadiga</small> </p><br>
-        <p class="fdetails"> Linkedin<i class="fa-brands fa-linkedin fa-bounce" style="color: #1456c8;"></i>Vinayak K Devadiga</p><br>
-        <p class="fdetails">Github  <i class="fa-brands fa-github fa-beat-fade" style="color: #0c0c0e;"></i>Vinayak K Devadiga</p>
+        <div class="foterdetails">
+            <p class="fdetails"><small>@Copyright climed by Vinayak K Devadiga</small> </p><br>
+            <p class="fdetails"> Linkedin<i class="fa-brands fa-linkedin fa-bounce" style="color: #1456c8;"></i>Vinayak
+                K Devadiga</p><br>
+            <p class="fdetails">Github <i class="fa-brands fa-github fa-beat-fade" style="color: #0c0c0e;"></i>Vinayak K
+                Devadiga</p>
 
-       
-    </div>
+
+        </div>
     </div>
 
     <div class="chawme">
