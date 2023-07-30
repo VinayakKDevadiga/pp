@@ -10,12 +10,7 @@
     <style>
         body {
             max-width: 100%;
-
-
-           
-
             border: 2px solid red;
-
         }
 
         .container {
@@ -193,11 +188,22 @@
             }
             
         }
+        #preloader{
+            background:#000 url(preloader.gif) no-repeat center center;
+            height:100vh;
+            width:15%;
+            position:fixed;
+            z-index:100;
+        }
     </style>
 
 </head>
 
 <body onload="displayText()">
+    <div id="preloader">
+            
+    </div>
+    
     <div class="con">
         <div class="container">
             <i class="fa-solid fa-bars fa-fade menu-button" onclick="toggleNav()" style="color: #1f2123;"></i>
